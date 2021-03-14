@@ -97,7 +97,7 @@ void loop()
 
 		// get the VOC index from SGP40.
 		unsigned int voc_index;
-		if(!sgp40_sensor.get_voc_index((float)temperature / 1000.0, (float)humidity / 100.0, &voc_index))
+		if(!sgp40_sensor.get_voc_index((float)temperature / 100.0, (float)humidity / 1000.0, &voc_index))
 		{
 			// write any standard number to recognize error for OLED output.
 			voc_index = 1234;
